@@ -1,8 +1,7 @@
-# KSTAR UPS Runtime Chart
+# Ksavio UPS Runtime Chart
 
 A modern, interactive web application for visualizing UPS battery runtime data. This tool helps users understand how long their UPS systems will run under different load conditions.
 
-![KSTAR UPS Runtime Chart](https://via.placeholder.com/800x400?text=KSTAR+UPS+Runtime+Chart)
 
 ## Features
 
@@ -30,7 +29,7 @@ A modern, interactive web application for visualizing UPS battery runtime data. 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/kstar-runtime-chart.git
+   git clone https://github.com/arianguy/Ksavio.git
    cd kstar-runtime-chart
    ```
 
@@ -96,9 +95,9 @@ To add new UPS models, edit the `runtimeData.js` file and add a new entry to the
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+Credits in Code to Savio Fernandes.
 
 ## Acknowledgments
 
-- KSTAR for providing the UPS runtime data
 - Chart.js team for the excellent charting library
 - React team for the frontend framework
