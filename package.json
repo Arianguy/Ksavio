@@ -2,7 +2,7 @@
   "name": "runtime-chart",
   "version": "0.1.0",
   "private": true,
-  "homepage": "/savio/",
+  "homepage": "https://arianguy.github.io/Ksavio",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
@@ -22,7 +22,9 @@
     "build": "react-scripts build",
     "build:savio": "set PUBLIC_URL=/savio/ && react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
