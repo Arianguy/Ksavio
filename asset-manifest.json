@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/Ksavio/static/css/main.79fc7d0c.css",
+    "main.js": "/Ksavio/static/js/main.2e7b8750.js",
+    "static/js/977.290f2310.chunk.js": "/Ksavio/static/js/977.290f2310.chunk.js",
+    "static/js/732.64a2ca48.chunk.js": "/Ksavio/static/js/732.64a2ca48.chunk.js",
+    "static/js/453.4c7446a2.chunk.js": "/Ksavio/static/js/453.4c7446a2.chunk.js",
+    "index.html": "/Ksavio/index.html",
+    "main.79fc7d0c.css.map": "/Ksavio/static/css/main.79fc7d0c.css.map",
+    "main.2e7b8750.js.map": "/Ksavio/static/js/main.2e7b8750.js.map",
+    "732.64a2ca48.chunk.js.map": "/Ksavio/static/js/732.64a2ca48.chunk.js.map",
+    "453.4c7446a2.chunk.js.map": "/Ksavio/static/js/453.4c7446a2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.79fc7d0c.css",
+    "static/js/main.2e7b8750.js"
+  ]
+}
