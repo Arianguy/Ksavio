@@ -1,70 +1,104 @@
-# Getting Started with Create React App
+# KSTAR UPS Runtime Chart
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, interactive web application for visualizing UPS battery runtime data. This tool helps users understand how long their UPS systems will run under different load conditions.
 
-## Available Scripts
+![KSTAR UPS Runtime Chart](https://via.placeholder.com/800x400?text=KSTAR+UPS+Runtime+Chart)
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Interactive Charts**: Visualize runtime data with interactive charts
+- **Multiple UPS Models**: Support for different kVA ratings and battery configurations
+- **PDF Export**: Generate professional PDF reports with runtime data
+- **Responsive Design**: Works on desktop and mobile devices
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technology Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **React**: Frontend UI library
+- **Chart.js**: Chart visualization
+- **jsPDF & html2canvas**: PDF generation
+- **CSS3**: Modern styling with CSS variables and responsive design
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+- Node.js (v14 or higher)
+- npm (v6 or higher)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```bash
+   git clone https://github.com/yourusername/kstar-runtime-chart.git
+   cd kstar-runtime-chart
+   ```
 
-### `npm run eject`
+2. Install dependencies:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   ```bash
+   npm install
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Start the development server:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ```bash
+   npm start
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. Open [http://localhost:3000](http://localhost:3000) to view the application in your browser.
 
-## Learn More
+## Usage
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Select the kVA rating from the dropdown menu
+2. View the runtime chart showing different battery configurations
+3. Export the chart as a PDF by clicking the "Export as PDF" button
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Project Structure
 
-### Code Splitting
+```
+kstar-runtime-chart/
+├── public/                  # Static files
+│   ├── images/              # Image assets
+│   └── index.html           # HTML template
+├── src/                     # Source code
+│   ├── styles/              # CSS files
+│   │   ├── global.css       # Global styles
+│   │   ├── App.css          # App component styles
+│   │   └── RuntimeChart.css # Chart component styles
+│   ├── App.jsx              # Main App component
+│   ├── RuntimeChart.jsx     # Chart component
+│   ├── runtimeData.js       # Chart data
+│   └── index.js             # Application entry point
+└── package.json             # Dependencies and scripts
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Customization
 
-### Analyzing the Bundle Size
+### Adding New UPS Models
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+To add new UPS models, edit the `runtimeData.js` file and add a new entry to the `runtimeData` object:
 
-### Making a Progressive Web App
+```javascript
+"3": {  // 3kVA model
+  labels: [0, 200, 400, 600, 800, 1000, 1200],
+  datasets: [
+    {
+      label: "3kVA Standard Battery",
+      data: [180, 120, 90, 60, 45, 30],
+      borderColor: COLORS.blue.border,
+      backgroundColor: COLORS.blue.background
+    }
+  ]
+}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## License
 
-### Advanced Configuration
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Acknowledgments
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- KSTAR for providing the UPS runtime data
+- Chart.js team for the excellent charting library
+- React team for the frontend framework
